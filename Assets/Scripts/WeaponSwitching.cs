@@ -4,54 +4,54 @@ using UnityEngine;
 
 public class WeaponSwitching : MonoBehaviour
 {
-    [Header("References")]
-    [SerializeField] private Transform[] weapons;
 
-    [Header("Keys")]
-    [SerializeField] private KeyCode[] keys;
+    public GameObject Slot1;
+    public GameObject Slot2;
+    public GameObject Slot3;
 
-    [Header("Settings")]
-    [SerializeField] private float switchTime;
-
-    private int selectedWeapon;
-    private float timeSinceLastSwitch;
-
-    private void Start() {
-        SetWeapons();
-        Select(selectedWeapon);
-
-        timeSinceLastSwitch = 0f;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
-    private void SetWeapons() {
-        weapons = new Transform[transform.childCount];
+    // Update is called once per frame
+    void Update()
+    {
+        if(Input.GetKeyDown("1"))
+        {
+            Equip1();
+        }
 
-        for (int i = 0; i < transform.childCount; i++)
-            weapons[i] = transform.GetChild(i);
+        if(Input.GetKeyDown("2"))
+        {
+            Equip2();
+        }
 
-        if (keys == null) keys = new KeyCode[weapons.Length];
+        if(Input.GetKeyDown("3"))
+        {
+            Equip3();
+        }
     }
 
-    private void Update() {
-        int previousSelectedWeapon = selectedWeapon;
-
-        for (int i = 0; i < keys.Length; i++)
-            if (Input.GetKeyDown(keys[i]) && timeSinceLastSwitch >= switchTime)
-                selectedWeapon = i;
-
-        if (previousSelectedWeapon != selectedWeapon) Select(selectedWeapon);
-
-        timeSinceLastSwitch += Time.deltaTime;
+    void Equip1()
+    {
+        Slot1.SetActive(true);
+        Slot2.SetActive(false);
+        Slot3.SetActive(false);
     }
 
-    private void Select(int weaponIndex) {
-        for (int i = 0; i < weapons.Length; i++)
-            weapons[i].gameObject.SetActive(i == weaponIndex);
-
-        timeSinceLastSwitch = 0f;
-
-        OnWeaponSelected();
+    void Equip2()
+    {
+        Slot1.SetActive(false);
+        Slot2.SetActive(true);
+        Slot3.SetActive(false);
     }
 
-    private void OnWeaponSelected() {  }
+    void Equip3()
+    {
+        Slot1.SetActive(false);
+        Slot2.SetActive(false);
+        Slot3.SetActive(true);
+    }
 }
