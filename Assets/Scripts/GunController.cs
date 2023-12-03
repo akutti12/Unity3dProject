@@ -19,8 +19,6 @@ public class GunController : MonoBehaviour
     private TrailRenderer BulletTrail;
     AudioSource Sound;
     public AudioClip shootSound;
-
-
     //Muzzleflash
   
 
