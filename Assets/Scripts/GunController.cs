@@ -55,7 +55,7 @@ public class GunController : MonoBehaviour
         DetermineAim();
         DetermineRotation();
 
-        if(Input.GetMouseButton(0) && _canShoot && _currentAmmoInClip > 0)
+        if(Input.GetMouseButtonDown(0) && _canShoot && _currentAmmoInClip > 0)
         {
             _canShoot = false;
             _currentAmmoInClip--;

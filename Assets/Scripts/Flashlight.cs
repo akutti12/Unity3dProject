@@ -6,6 +6,7 @@ public class Flashlight : MonoBehaviour
 {
     [SerializeField] GameObject FlashlightLight;
     private bool FlashlightActive = false;
+    private bool canActive;
 
     void Start()
     {

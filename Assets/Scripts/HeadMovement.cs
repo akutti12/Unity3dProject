@@ -5,6 +5,7 @@ using UnityEngine;
 public class HeadMovement : MonoBehaviour
 {
       [Header("Configuration")]
+      
     [SerializeField] private bool _enable = true;
     [SerializeField, Range(0, 0.1f)] private float _Amplitude = 0.015f; [SerializeField, Range(0, 30)] private float _frequency = 10.0f;
     [SerializeField] private Transform _camera = null; [SerializeField] private Transform _cameraHolder = null;
@@ -26,6 +27,9 @@ public class HeadMovement : MonoBehaviour
         ResetPosition();
         _camera.LookAt(FocusTarget());
     }
+
+
+
     private Vector3 FootStepMotion()
     {
         Vector3 pos = Vector3.zero;
@@ -57,4 +61,5 @@ public class HeadMovement : MonoBehaviour
         if (_camera.localPosition == _startPos) return;
         _camera.localPosition = Vector3.Lerp(_camera.localPosition, _startPos, 1 * Time.deltaTime);
     }
+    
 }
