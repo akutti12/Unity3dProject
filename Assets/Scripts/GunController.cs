@@ -165,19 +165,19 @@ public class GunController : MonoBehaviour
         }
     }
 
-    private IEnumerator SpawnTrail(TrailRenderer Trail, RaycastHit Hit)
+    private IEnumerator SpawnTrail(TrailRenderer Trail, RaycastHit hit)
     {
         float time = 0;
         Vector3 startPosition = Trail.transform.position;
 
         while (time < 1)
         {
-            Trail.transform.position = Vector3.Lerp(startPosition, Hit.point, time);
+            Trail.transform.position = Vector3.Lerp(startPosition, hit.point, time);
             time += Time.deltaTime / Trail.time;
 
             yield return null;
         }
-        Trail.transform.position = Hit.point;
+        Trail.transform.position = hit.point;
     }
 
 
