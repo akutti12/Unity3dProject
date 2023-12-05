@@ -179,6 +179,7 @@ public class GunController : MonoBehaviour
         }
         Trail.transform.position = hit.point;
     }
+    
 
 
 }
