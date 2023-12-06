@@ -4,28 +4,30 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ground
+  - Flesh
+  - Water
+  - Zombie
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - ground
+  - 
   - Water
   - UI
-  - Enemy
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Zombie
+  - Interact
+  - BodyPart
+  - PlayerBody
+  - PlayerInvisible
+  - PostProcessing Main
+  - PostProcessing Arms
+  - CamExamination
+  - CamWeapon
+  - Ladder
+  - CamSecondExamination
+  - Threat
   - 
   - 
   - 
