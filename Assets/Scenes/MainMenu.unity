@@ -416,11 +416,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6278561042711762156, guid: e274edc91acbb9d42a96268a7312de7c,
-        type: 3}
-      propertyPath: platformMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6278561042711762158, guid: e274edc91acbb9d42a96268a7312de7c,
         type: 3}
       propertyPath: NewGameBuildName
