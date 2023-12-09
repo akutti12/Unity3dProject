@@ -22,11 +22,11 @@ namespace HFPS.Systems
                 {
                     if (!t.gameObject.GetComponent<Waypoint>())
                     {
-                        Waypoints.Add(t.gameObject.AddComponent<Waypoint>());
+                        //Waypoints.Add(t.gameObject.AddComponent<Waypoint>());
                     }
                     else
                     {
-                        Waypoints.Add(t.gameObject.GetComponent<Waypoint>());
+                        //Waypoints.Add(t.gameObject.GetComponent<Waypoint>());
                     }
                 }
             }
